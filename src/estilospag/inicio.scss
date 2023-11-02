@@ -1,0 +1,42 @@
+// Inicio.scss
+
+.contenedor-inicio {
+  display: flex;
+  flex-direction: column;
+  background-color: #071E26;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  // Agrega estilos adicionales según sea necesario
+}
+a {
+  text-decoration: none; /* Elimina la decoración del texto */
+  color: inherit; /* Hereda el color del texto del elemento padre */
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Agrega estilos adicionales según sea necesario
+}
+
+.contenedor-filtros, .contenedor-barra {
+  width: 100%;
+
+  // Agrega estilos adicionales según sea necesario
+}
+
+.contenedor-inicio, .contenedor-principal, .contenedor-filtros, .contenedor-barra {
+  color: white;
+  // Agrega otros estilos si los necesitas
+}
+// Estilo responsivo
+@media only screen and (min-width: 768px) {
+  .contenedor-principal {
+    flex-direction: row; // Cambia a una disposición de fila en pantallas más grandes
+  }
+
+  // Agrega estilos responsivos adicionales si es necesario
+}

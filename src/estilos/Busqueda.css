@@ -1,0 +1,26 @@
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    width: 400px; /* Ajusta el ancho según sea necesario */
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 10px;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .busqueda {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  

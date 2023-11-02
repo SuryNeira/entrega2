@@ -1,0 +1,8 @@
+.contenedor-hogar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #5bb3f2;
+    border-radius: 20px;
+  }
+  

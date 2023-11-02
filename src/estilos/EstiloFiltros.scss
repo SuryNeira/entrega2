@@ -1,0 +1,48 @@
+$primary-color: #4e8dd5;
+
+.boton-filtro {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px;
+
+  &:hover {
+    background-color: #2e64a2;
+  }
+}
+.filtros {
+  width: 200px; /* Ajusta el ancho según sea necesario */
+  background: linear-gradient(to bottom, #1B538E, rgba(27, 83, 142, 0));
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.categorias {
+  margin-top: 10px;
+}
+
+.categoria {
+  margin-bottom: 10px;
+}
+
+
+/* Estilo responsivo */
+@media only screen and (max-width: 600px) {
+  .filtros {
+    width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+  }
+}

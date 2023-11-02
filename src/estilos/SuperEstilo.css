@@ -1,0 +1,9 @@
+.contenedor-supermercado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #EB649F;
+    border-radius: 20px;
+  }
+  
+

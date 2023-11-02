@@ -1,0 +1,21 @@
+.seccion-ofertas {
+    display: flex;
+    background-color: #C58CA3;
+    padding: 10px;
+    border-radius: 20px;
+    width: 400px;
+    border: none;
+    text-decoration: none;
+    color: #FCF9FA;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+  
+    h2 {
+      margin: 0; /* Elimina el margen del encabezado */
+    }
+  
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  

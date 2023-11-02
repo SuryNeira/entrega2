@@ -1,0 +1,28 @@
+[
+    {
+        "nombreEmpresa": "Kiosco La Esquinita",
+        "direccion": "Calle Principal 123",
+        "emailEmpresa": "esquinakiosco@email.com",
+        "contrasenaEmpresa": "kioscopass123",
+        "representante": "María López"
+    },
+
+    {
+        "nombreEmpresa": "Mini Market Express",
+        "direccion": "Avenida Central 456",
+        "emailEmpresa": "minimarket@email.com",
+        "contrasenaEmpresa": "marketpass123",
+        "representante": "Juan Pérez"
+    },
+
+    {
+        "nombreEmpresa": "Tiendita El Rinconcito",
+        "direccion": "Calle Secundaria 789",
+        "emailEmpresa": "rinconcito@email.com",
+        "contrasenaEmpresa": "rinconpass123",
+        "representante": "Luisa García"
+    }
+
+
+
+]

@@ -1,0 +1,47 @@
+.registro {
+    padding: 20px;
+  }
+  
+  #formulario1,
+  #formulario2 {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #h2Under {
+    text-align: center;
+  }
+  
+  #enviar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-check {
+    margin-bottom: 10px;
+  }
+  

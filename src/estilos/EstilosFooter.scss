@@ -1,0 +1,18 @@
+$color-celeste: #5bc0de;
+
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #333;
+  font-size: 14px;
+
+  border-top: 2px solid $color-celeste;
+  
+  @media screen and (max-width: 768px) {
+    position: static;
+  }
+}

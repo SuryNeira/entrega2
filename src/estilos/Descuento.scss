@@ -1,0 +1,35 @@
+$primary-color: #fff;
+$secondary-color: #6c757d;
+
+.descuento-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #C58CA3;
+    border: 4px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+  }
+
+  .text {
+    color: $primary-color;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+}

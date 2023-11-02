@@ -1,0 +1,48 @@
+// estilos.scss
+
+$boton-color-fondo: #5bc0de; // Cambia el color de fondo a celeste
+$boton-color-letra: #ffffff;
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0C4383;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bothead {
+    border: none;
+    border-radius: 20px;
+    background-color: $boton-color-fondo;
+    color: $boton-color-letra;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    flex: 1;
+
+    &:hover {
+      background-color: darken($boton-color-fondo, 10%);
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 5px 0;
+    }
+  }
+}

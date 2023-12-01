@@ -1,52 +1,102 @@
+import React, { useState, useEffect } from 'react';
+import { ReCaptcha } from 'react-google-recaptcha';
+import Form from 'react-bootstrap/Form';
+import { Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import '../estilospag/login.scss';
 
-import React, { useState } from 'react';
-import { ReCAPTCHA } from 'react-google-recaptcha';
+function Login() {
+  const [recaptchaResponse, setRecaptchaResponse] = useState('');
 
-
-const LoginComponent = () => {
- const [username, setUsername] = useState('');
- const [password, setPassword] = useState('');
- const [captchaValue, setCaptchaValue] = useState('');
-
-
- const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Aquí puedes validar si el captcha fue resuelto correctamente antes de continuar con el proceso de inicio de sesión
- };
+    console.log("HOLA HASTA AQUI LLEGO");
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ recaptchaResponse }),
+      });
 
- const onChangeUsername = (event) => {
-    setUsername(event.target.value);
- };
+      const data = await response.json();
 
- const onChangePassword = (event) => {
-    setPassword(event.target.value);
- };
+      if (data.success) {
+        // La validación del reCAPTCHA fue exitosa, puedes realizar otras acciones aquí.
+        console.log('Formulario enviado con éxito');
+      } else {
+        // La validación del reCAPTCHA falló, puedes mostrar un mensaje de error.
+        console.error('Error al validar reCAPTCHA:', data.error);
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+    }
+  };
 
- const onChangeCaptcha = (value) => {
-    setCaptchaValue(value);
- };
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
 
- const onExpired = () => {
-    setCaptchaValue('');
- };
+    return () => {
+      // Limpiar el script si el componente se desmonta
+      document.head.removeChild(script);
+    };
+  }, []);
 
- return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Usuario:
-        <input type="text" value={username} onChange={onChangeUsername} />
-      </label>
-      <br />
-      <label>
-        Contraseña:
-        <input type="password" value={password} onChange={onChangePassword} />
-      </label>
-      <br />
-      <ReCAPTCHA sitekey="TU_CLAVE_SITE" onChange={onChangeCaptcha} onExpired={onExpired} />
-      <br />
-      <button type="submit">Iniciar sesión</button>
-    </form>
- );
-};
+  return (
+    <div className="login">
+      <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+        <Container>
+          <Row className="justify-content-center">
+            <Col md={6}>
+              <div className="container" id="inicio">
+                <h2 className="mb-4 text-center">INICIO DE SESIÓN</h2>
+              </div>
 
-export default LoginComponent;
+              <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="usuario">
+                  <Form.Label>Usuario:</Form.Label>
+                  <Form.Control type="text" placeholder="Ingrese su usuario" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="contrasena">
+                  <Form.Label>Contraseña:</Form.Label>
+                  <Form.Control type="password" placeholder="Ingrese su contraseña" />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicCheckbox1">
+                  <Form.Check type="checkbox" label="Persona" />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicCheckbox2">
+                  <Form.Check type="checkbox" label="Empresa" />
+                </Form.Group>
+
+                <div id="sesionUnico" className="mb-3">Marque solo una de las opciones.</div>
+
+                <div id="captcha" className="mb-3">
+                  <div className="g-recaptcha" data-sitekey="6LfPdSIpAAAAADAuKoTMClmVq_Dm_cC06fUdhwSA" onSubmit={(value) => setRecaptchaResponse(value)}>
+                    HOLA SOY YO 
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <Button variant="primary" type="submit" className="mt-3" id="submit">
+                    Iniciar Sesión
+                  </Button>
+                </div>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
+  );
+}
+
+export default Login;

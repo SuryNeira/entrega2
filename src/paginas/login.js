@@ -5,17 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../estilospag/login.scss'; // Importa tu archivo de estilos Sass aquí
-import axios from 'axios';
 
-const login = async (email, password) => {
-  try {
-     const response = await axios.post('/api/login', { email, password });
-     return response.data;
-  } catch (error) {
-     console.error(error);
-     return { error: 'Error en el inicio de sesión' };
-  }
- };
 function Login() {
   return (
     <div className="login">

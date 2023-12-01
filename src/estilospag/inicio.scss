@@ -1,7 +1,4 @@
 // Inicio.scss
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 .contenedor-inicio {
   display: flex;
@@ -10,12 +7,11 @@
   align-items: center;
   text-decoration: none;
   border: none;
-  padding: 20px; // Agrega un espacio de relleno para separar del borde
+  // Agrega estilos adicionales según sea necesario
 }
-
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Elimina la decoración del texto */
+  color: inherit; /* Hereda el color del texto del elemento padre */
 }
 
 .contenedor-principal {
@@ -23,24 +19,24 @@ a {
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (min-width: 768px) {
-    flex-direction: row; // Cambia a una disposición de fila en pantallas más grandes
-    justify-content: space-between; // Añade espacio entre los elementos en la fila
-  }
+  // Agrega estilos adicionales según sea necesario
 }
 
 .contenedor-filtros, .contenedor-barra {
   width: 100%;
-  margin-top: 10px; // Agrega espacio entre contenedores
 
-  @media only screen and (min-width: 768px) {
-    width: 30%; // Ajusta el ancho según tus necesidades
-    margin-top: 0; // Elimina el espacio superior en pantallas más grandes
-  }
+  // Agrega estilos adicionales según sea necesario
 }
 
 .contenedor-inicio, .contenedor-principal, .contenedor-filtros, .contenedor-barra {
   color: white;
+  // Agrega otros estilos si los necesitas
 }
+// Estilo responsivo
+@media only screen and (min-width: 768px) {
+  .contenedor-principal {
+    flex-direction: row; // Cambia a una disposición de fila en pantallas más grandes
+  }
 
-// Agrega estilos adicionales según sea necesario
+  // Agrega estilos responsivos adicionales si es necesario
+}

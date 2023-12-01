@@ -17,7 +17,7 @@ const App = () => {
       <div>
         <Header />
         <Routes>
-          <Route path="/paginas/inicio/" element={<Inicio />} />
+          <Route path="/" element={<Inicio />} />
           <Route path="/paginas/Ofertas" element={<Ofertas />} />
           <Route path="/paginas/login" element={<Login />} /> {/* Añade esta ruta para el componente de inicio de sesión */}
           <Route path="/paginas/registro" element={<Registro />} /> {/* Añade esta ruta para el componente de inicio de sesión */}

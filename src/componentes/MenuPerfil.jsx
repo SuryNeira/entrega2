@@ -1,21 +1,27 @@
-import React from 'react';
-import Usuario from './Usuario';
-import '../estilos/MenuPerfil.scss';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-import fotoUsuario from '../imagenes/perfil.png';
-
-const MenuPerfil = ({ usuario, onProductosFavoritosClick }) => {
+function Producto() {
   return (
-    <div className="menu-perfil">
-      <h2>Mi Perfil</h2>
-      {/* Usa la imagen importada */}
-      <Usuario {...usuario} foto={fotoUsuario} />
-
-      <button className="boton-menu" onClick={onProductosFavoritosClick}>
-        Productos Favoritos
-      </button>
-    </div>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://storage.googleapis.com/preminens-slbu-p/pim/cc/cl/product-ecommerce-alta/EMR/7801610285800.jpg" />
+      <Card.Body>
+        <Card.Title>Nombre</Card.Title>
+        <Card.Text>
+          Descripcion...
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Valor</ListGroup.Item>
+        
+      </ListGroup>
+      <Card.Body>
+        <Card.Link href= '../pages/Perfil'>Ver Producto</Card.Link>
+        <Card.Link href="#">Agregar al carrito</Card.Link>
+        <Card.Link href="#">Ver Comercio</Card.Link>
+      </Card.Body>
+    </Card>
   );
-};
+}
 
-export default MenuPerfil;
+export default Producto;

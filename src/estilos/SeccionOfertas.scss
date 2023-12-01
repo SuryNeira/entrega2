@@ -6,16 +6,16 @@
   width: 400px;
   border: none;
   color: #FCF9FA;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; 
+  align-items: center;
 
   h2 {
-    margin: 0; /* Elimina el margen del encabezado */
+    margin: 0; 
   }
 
   a {
-    text-decoration: none; /* Elimina la línea bajo el enlace */
-    color: #FCF9FA; /* Asegura que el color del enlace sea el mismo que el texto */
+    text-decoration: none; 
+    color: #FCF9FA; 
   }
 
   @media only screen and (max-width: 768px) {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ReCaptcha } from 'react-google-recaptcha';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';

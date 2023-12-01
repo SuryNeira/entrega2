@@ -1,42 +1,30 @@
-// Inicio.scss
-
-.contenedor-inicio {
-  display: flex;
-  flex-direction: column;
-  background-color: #071E26;
-  align-items: center;
-  text-decoration: none;
-  border: none;
-  // Agrega estilos adicionales según sea necesario
-}
-a {
-  text-decoration: none; /* Elimina la decoración del texto */
-  color: inherit; /* Hereda el color del texto del elemento padre */
-}
-
-.contenedor-principal {
+.contenedor-categoria {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(214, 106, 182, 0.784);  // Color de fondo, puedes cambiarlo según tus necesidades
+  border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  // Agrega estilos adicionales según sea necesario
+  justify-content: center;
+  transition: background-color 0.3s ease;  // Transición suave para el cambio de color de fondo
 }
 
-.contenedor-filtros, .contenedor-barra {
-  width: 100%;
-
-  // Agrega estilos adicionales según sea necesario
+.contenedor-categoria:hover {
+  background-color: #ff8080;  // Color de fondo al pasar el ratón, puedes cambiarlo según tus necesidades
 }
 
-.contenedor-inicio, .contenedor-principal, .contenedor-filtros, .contenedor-barra {
-  color: white;
-  // Agrega otros estilos si los necesitas
+.imagen-categoria {
+  width: 50px;  // Ajusta el tamaño según tus necesidades
+  height: 50px;  // Ajusta el tamaño según tus necesidades
+  border-radius: 50%;  // Hace que la imagen sea un círculo
+  overflow: hidden;  // Oculta las partes de la imagen que están fuera del círculo
 }
-// Estilo responsivo
-@media only screen and (min-width: 768px) {
-  .contenedor-principal {
-    flex-direction: row; // Cambia a una disposición de fila en pantallas más grandes
-  }
 
-  // Agrega estilos responsivos adicionales si es necesario
+.nombre-categoria {
+  margin-top: 5px;
+  font-size: 12px;  // Tamaño de la fuente, puedes ajustarlo según tus necesidades
+  font-weight: bold;  // Negrita
+  text-align: center;  // Centra el texto
+  color: #fff;  // Color del texto, puedes cambiarlo según tus necesidades
 }

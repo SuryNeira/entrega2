@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../componentes/Header';
 import Hogar from '../componentes/Hogar';
 import Filtros from '../componentes/Filtros';
 import SeccionOfertas from '../componentes/SeccionOfertas';
@@ -12,7 +11,7 @@ import '../estilospag/inicio.scss';
 const Inicio = () => {
   return (
     <div className="contenedor-inicio">
-      
+
       <div className="contenedor-principal">
         <div className="contenedor-filtros">
           <Filtros />
@@ -32,5 +31,3 @@ const Inicio = () => {
 };
 
 export default Inicio;
-
-

@@ -1,7 +1,4 @@
 import React from 'react';
-import Header from '../componentes/Header';
-import Hogar from '../componentes/Hogar';
-import SeccionDescuentos from '../componentes/SeccionDescuentos';
 import Filtros from '../componentes/Filtros';
 import Supermercado from '../componentes/Supermercado';
 import BarraBusqueda from '../componentes/BarraBusqueda';

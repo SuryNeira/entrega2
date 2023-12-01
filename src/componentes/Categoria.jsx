@@ -1,5 +1,5 @@
 import React from "react";
-import "../estilos/Categoria.css";
+import "../estilos/Categoria.scss";
 
 function Categoria(props) {
   const handleClick = () => {

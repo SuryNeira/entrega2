@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './estilospag/registro.scss';
+import '../estilospag/registro.scss';
 import React, { useEffect } from 'react';
 import $ from 'jquery';
 import 'jquery-validation';

@@ -13,10 +13,10 @@ const Header = () => {
       <div className="header-right">
         <button className="bothead">Lista de deseos</button>
         <button className="bothead">Mi cesta</button>
-        <Link to="./login">
+        <Link to="../paginas/login">
           <button className="bothead">Iniciar sesión</button>
         </Link>
-        <Link to="./registro">
+        <Link to="../paginas/registro">
           <button className="bothead">Registro</button>
         </Link>
       </div>

@@ -1,54 +1,49 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
-import { Button } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import '../estilospag/login.scss'; // Importa tu archivo de estilos Sass aquí
+import React, { useState } from 'react';
+import { ReCAPTCHA } from 'react-google-recaptcha';
 
-function Login() {
-  return (
-    <div className="login">
-      <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
-        <Container>
-          <Row className="justify-content-center">
-            <Col md={6}>
-              <div className="container" id="inicio">
-                <h2 className="mb-4 text-center">INICIO DE SESIÓN</h2>
-              </div>
+const LoginComponent = () => {
+ const [username, setUsername] = useState('');
+ const [password, setPassword] = useState('');
+ const [captchaValue, setCaptchaValue] = useState('');
 
-              <Form>
-                <Form.Group className="mb-3" controlId="usuario">
-                  <Form.Label>Usuario:</Form.Label>
-                  <Form.Control type="text" placeholder="Ingrese su usuario" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="contrasena">
-                  <Form.Label>Contraseña:</Form.Label>
-                  <Form.Control type="password" placeholder="Ingrese su contraseña" />
-                </Form.Group>
+ const handleSubmit = (event) => {
+    event.preventDefault();
+    // Aquí puedes validar si el captcha fue resuelto correctamente antes de continuar con el proceso de inicio de sesión
+ };
 
-                <Form.Group controlId="formBasicCheckbox1">
-                  <Form.Check type="checkbox" label="Persona" />
-                </Form.Group>
+ const onChangeUsername = (event) => {
+    setUsername(event.target.value);
+ };
 
-                <Form.Group controlId="formBasicCheckbox2">
-                  <Form.Check type="checkbox" label="Empresa" />
-                </Form.Group>
+ const onChangePassword = (event) => {
+    setPassword(event.target.value);
+ };
 
-                <div id="sesionUnico" className="mb-3">Marque solo una de las opciones.</div>
+ const onChangeCaptcha = (value) => {
+    setCaptchaValue(value);
+ };
 
-                <div className="text-center">
-                  <Button variant="primary" type="submit" className="mt-3" id="submit">
-                    Iniciar Sesión
-                  </Button>
-                </div>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </div>
-  );
-}
+ const onExpired = () => {
+    setCaptchaValue('');
+ };
 
-export default Login;
+ return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Usuario:
+        <input type="text" value={username} onChange={onChangeUsername} />
+      </label>
+      <br />
+      <label>
+        Contraseña:
+        <input type="password" value={password} onChange={onChangePassword} />
+      </label>
+      <br />
+      <ReCAPTCHA sitekey="TU_CLAVE_SITE" onChange={onChangeCaptcha} onExpired={onExpired} />
+      <br />
+      <button type="submit">Iniciar sesión</button>
+    </form>
+ );
+};
+
+export default LoginComponent;

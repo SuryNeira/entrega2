@@ -6,13 +6,21 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-left">
-        <button className="bothead">Ayuda</button>
-        <button className="bothead">Sobre nosotros</button>
-        <button className="bothead">¿Cómo ser parte de nosotros?</button>
+        <Link to="../paginas/inicio">
+          <button className="bothead">Inicio</button>
+        </Link>
+        <Link to="../paginas/preguntas">
+          <button className="bothead">Preguntas Frecuentes</button>
+        </Link>
+        <Link to="../paginas/Ofertas">
+          <button className="bothead">Ofertas</button>
+        </Link>
+       
       </div>
       <div className="header-right">
-        <button className="bothead">Lista de deseos</button>
-        <button className="bothead">Mi cesta</button>
+      <Link to="../paginas/PerfilUser">
+          <button className="bothead">Mi Perfil</button>
+        </Link>
         <Link to="../paginas/login">
           <button className="bothead">Iniciar sesión</button>
         </Link>

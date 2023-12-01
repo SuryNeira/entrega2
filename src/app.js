@@ -5,6 +5,7 @@ import Inicio from './paginas/Inicio';
 import Ofertas from './paginas/Ofertas';
 import Login from './paginas/login';
 import Registro from './paginas/registro';  // Asegúrate de ajustar la ruta a tu componente de inicio de sesión
+import Footer from './componentes/Footer';
 // import otros componentes
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/paginas/registro" element={<Registro />} /> {/* Añade esta ruta para el componente de inicio de sesión */}
           {/* Agregar otras rutas aquí */}
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
